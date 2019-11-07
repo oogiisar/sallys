@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="Sally's Resume" content="Read all about Sally's education and experience">
+    <title>Sally Student Resume</title>
+  </head>
+  <body>
+    <div id="application-root">
+    </div>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script type='text/babel'>
+      function App(props) {
+        return (
+          <div>
+            <header>
+              <div>
+                <h1>I am {props.firstName}</h1>
+                <img src={'https://m.media-amazon.com/images/M/MV5BMTY5NzE3NzU3MF5BMl5BanBnXkFtZTgwMjg0NTQ5MDE@._V1_.jpg'} alt="Its me :)" />
+                <h2>About Me </h2>
+                <p>Hello, I am a frontend web development student at Bloc. Before I worked as a teacher at a hig school. I just decidet to change my career. Also I am self employed running coach and train people who want to improve their running. I teach stess management courses using running</p>
+              </div>
+            </header>
+            <main>
+              <section>
+                <h1>Education</h1>
+                <ul>
+                  <li>Sequia high school Jan 1990 - Mar 2002</li>
+                  <li>ASU English Teacher Aug 2003 - May 2008 </li>
+                  <li>Bloc Web Developer Jul 2019 - current</li>
+                </ul>
+              </section>
+              <section>
+                <div>
+                  <h1>Employement History</h1>
+                  <p>ESL Teacher at Hancock High School Feb 2010 - Sep 2015</p>
+                  <ul>
+                    <li>Taught english literature 5th grade students</li>
+                    <li>Instructed creative writing courses 7th grade</li>
+                    <li>Organized school trips</li>
+                  </ul>
+                </div>
+                <div>
+                  <p>Running Coach Self employed Apr 2015 - current</p>
+                  <ul>
+                    <li>Training Children and Adults</li>
+                    <li>Pacer for Races</li>
+                    <li>Volentuured for Marathons </li>
+                    <li>Teach Meditation</li>
+                  </ul>
+                </div>
+              </section>
+            </main>
+            <address>
+              <h1>Contact</h1>
+              <p>Name: {props.firstName} {props.lastName}</p>
+              <p>Email Address: <a href="mailto:{props.firstName}@example.com">{props.firstName} {props.lastName}</a></p>
+              <p>Phone number: 602-666-7890</p>
+              <p>Home Address: Box 564, Disneyland, USA</p>
+            </address>
+          </div>
+        )};
+        ReactDOM.render(
+        <App
+          firstName='Sally'
+          lastName='Miller'
+        />,
+        document.querySelector('#application-root')
+      );
+    </script>
+  </body>
+</html>
